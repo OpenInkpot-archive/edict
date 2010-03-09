@@ -1,0 +1,52 @@
+#!/usr/bin/make -f
+
+DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+CFLAGS += -fvisibility=hidden -Wall
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	CFLAGS="$(CFLAGS)" ./autogen.sh --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr
+	touch $@
+
+build: build-stamp
+build-stamp: configure
+	dh_testdir
+	$(MAKE)
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_clean
+	[ ! -f Makefile ] || $(MAKE) distclean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/edict
+
+	mkdir -p $(CURDIR)/debian/edict-settings-n516/etc/keys
+	install -m 0644 $(CURDIR)/data/edict.n516.ini $(CURDIR)/debian/edict-settings-n516/etc/keys/edict.ini
+
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	dh_compress
+	dh_fixperms
+	dh_strip --dbg-package=edict-dbg
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_builddeb
+
+binary-indep: build install
+
+binary: binary-arch binary-indep
+
+.PHONY: clean install build binary binary-arch binary-indep
