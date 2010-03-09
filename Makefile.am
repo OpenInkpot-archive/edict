@@ -1,4 +1,4 @@
-SUBDIRS = src data themes #help po
+SUBDIRS = src data themes po #help
 
 #desktopdir = $(datarootdir)/applications
 #desktop_DATA = edict.desktop
