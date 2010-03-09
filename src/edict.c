@@ -96,6 +96,7 @@ _client_del(void *param, int ev_type UNUSED, void *ev)
 
     char *str = strndup(msg->msg, msg->size);
     char *tr_str = translate(info->dlist, str);
+    eoi_textbox_text_set(info->textbox, "");
     eoi_textbox_text_set(info->textbox, tr_str);
     free(tr_str);
     free(str);
