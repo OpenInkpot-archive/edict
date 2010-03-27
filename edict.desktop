@@ -1,6 +1,6 @@
 [Desktop Entry]
-Encoding=UTF-8
-Name=edict
+Name=Dictionary
+Name[ru]=Словарь 
 Exec=edict_launcher
-Type=Application
-Categories=Utility;Dictionary;
+Type=Application   
+Categories=Applications
