@@ -1,13 +1,13 @@
-# edict
+# SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-# Alexander Kerner <lunohod@openinkpot.org>, 2010.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: edict 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2010-03-09 18:50+0100\n"
+"POT-Creation-Date: 2010-03-27 15:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,15 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/edict.c:125
+#: src/edict.c:127
 msgid "Dictionary: Help"
 msgstr ""
 
-#: src/edict.c:205
+#: src/edict.c:159
+msgid "Search"
+msgstr ""
+
+#: src/edict.c:225
 msgid "Dictionary"
 msgstr ""
 
-#: src/edict.c:226
+#: src/edict.c:247
 msgid "No dictionaries found"
 msgstr ""
 

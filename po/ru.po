@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: edict 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
 "POT-Creation-Date: 2010-03-27 15:48+0100\n"
-"PO-Revision-Date: 2010-03-20 10:12+0100\n"
-"Last-Translator: Tomasz Długosz <tomek3d@gmail.com>\n"
-"Language-Team: Polish\n"
+"PO-Revision-Date: Sat, 27 Mar 2010 15:49:18 +0100\n"
+"Last-Translator: Alexander Kerner <lunohod@openinkpot.org>\n"
+"Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,20 +18,20 @@ msgstr ""
 
 #: src/edict.c:127
 msgid "Dictionary: Help"
-msgstr "Słownik: Pomoc"
+msgstr "Словарь: Справка"
 
 #: src/edict.c:159
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 #: src/edict.c:225
 msgid "Dictionary"
-msgstr "Słownik"
+msgstr "Словарь"
 
 #: src/edict.c:247
 msgid "No dictionaries found"
-msgstr "Nie znaleziono słowników"
+msgstr "Слово не найдено"
 
 #: src/picodict.c:39
 msgid "No results"
-msgstr "Brak wyniku"
+msgstr "Нет результатов"
