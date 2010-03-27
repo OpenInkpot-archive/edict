@@ -1,3 +1,16 @@
+edict (0.1.1) zelazny; urgency=low
+
+  [ Alexander Kerner ]
+  * Fix black screen issue
+  * Include translations
+  * Add ability to enter text for a lookup
+  * Update .po files
+
+  [ Tomasz Długosz ]
+  * l10n: initial polish translation
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 27 Mar 2010 15:51:40 +0100
+
 edict (0.1) zelazny; urgency=low
 
   * first build
