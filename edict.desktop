@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Dictionary
-Name[ru]=Словарь 
+Name[ru]=Словарь
 Exec=edict_launcher
-Type=Application   
+Type=Application
 Categories=Applications
