@@ -43,6 +43,7 @@
 #include <libeoi_clock.h>
 #include <libeoi_battery.h>
 #include <libeoi_textbox.h>
+#include <libeoi_entry.h>
 
 #include "picodict.h"
 
@@ -127,6 +128,18 @@ show_help(Evas *evas)
                   NULL);
 }
 
+void entry_handler(Evas_Object *entry,
+        const char *text,
+        void* param)
+{
+    info_t *info = (info_t *)param;
+
+    char *tr_str = translate(info->dlist, text);
+    eoi_textbox_text_set(info->textbox, "");
+    eoi_textbox_text_set(info->textbox, tr_str);
+    free(tr_str);
+}
+
 static void
 key_handler(void *data, Evas *evas UNUSED, Evas_Object *obj UNUSED,
             void *event_info)
@@ -141,6 +154,9 @@ key_handler(void *data, Evas *evas UNUSED, Evas_Object *obj UNUSED,
     if (!action || !strlen(action))
         return;
 
+    if (!strcmp(action, "Search"))
+        entry_new(evas, entry_handler, "entry",
+            gettext("Search"), info);
     if (!strcmp(action, "PageDown"))
         eoi_textbox_page_next(info->textbox);
     else if (!strcmp(action, "PageUp"))
@@ -192,8 +208,7 @@ main(int argc, char *argv[])
     ecore_evas_borderless_set(info->ee, 0);
     ecore_evas_shaped_set(info->ee, 0);
     ecore_evas_title_set(info->ee, "edict");
-    if (argc > 1)
-        ecore_evas_show(info->ee);
+    ecore_evas_show(info->ee);
 
     ecore_evas_callback_delete_request_set(info->ee,
                                            main_win_delete_handler);

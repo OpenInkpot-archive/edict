@@ -1,7 +1,7 @@
 SUBDIRS = src data themes po #help
 
-#desktopdir = $(datarootdir)/applications
-#desktop_DATA = edict.desktop
+desktopdir = $(datarootdir)/applications
+desktop_DATA = edict.desktop
 
 #install-exec-hook:
 #	mkdir -p ${DESTDIR}/usr/share/help/edict

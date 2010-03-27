@@ -226,6 +226,9 @@ string_add_dictname(str_t *str, const char *name)
 char *
 translate(dict_t *dlist, const char *text)
 {
+    if(!text || strlen(text) == 0)
+        return strdup("");
+
     str_t str = string_constructor();
 
     while (dlist) {

@@ -102,13 +102,12 @@ send_text(const char *text)
 int
 main(int argc, char **argv)
 {
-    if (argc != 2) {
-        fprintf(stderr, "Usage: %s <text>\n", argv[0]);
-        return 1;
-    }
+    char *str = "";
+    if(argc > 1)
+        str = argv[1];
 
-    if (send_text(argv[1]) != 0)
-        execlp(EDICT, EDICT, argv[1], NULL);
+    if (send_text(str) != 0)
+        execlp(EDICT, EDICT, str, NULL);
 
     return 0;
 }
