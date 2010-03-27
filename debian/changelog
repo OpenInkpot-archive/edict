@@ -1,3 +1,9 @@
+edict (0.1.2) zelazny; urgency=low
+
+  * Fix .desktop file
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 27 Mar 2010 17:30:09 +0100
+
 edict (0.1.1) zelazny; urgency=low
 
   [ Alexander Kerner ]
