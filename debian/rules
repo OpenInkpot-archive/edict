@@ -28,7 +28,7 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/edict
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 
 	mkdir -p $(CURDIR)/debian/edict-settings-n516/etc/keys
 	install -m 0644 $(CURDIR)/data/edict.n516.ini $(CURDIR)/debian/edict-settings-n516/etc/keys/edict.ini
@@ -37,6 +37,7 @@ binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_installdirs
+	dh_install
 	dh_compress
 	dh_fixperms
 	dh_strip --dbg-package=edict-dbg

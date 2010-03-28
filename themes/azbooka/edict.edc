@@ -1,0 +1,47 @@
+styles {
+	style {
+		name, "textblock_style";
+		base, "font=DejaVu\\ Sans\\ Condensed font_size=22 align=left color=#000 wrap=word left_margin=10 right_margin=-10";
+
+		tag, "br" "\n";
+		tag, "p" "\t";
+		tag, "/p" "- \n";
+		tag, "b" "+ font=DejaVu\\ Sans\\ Condensed:style=bold";
+		tag, "h1" "+ font=DejaVu\\ Sans\\ Condensed:style=bold font_size=31";
+		tag, "/h1" "- \n";
+		tag, "h2" "+ font=DejaVu\\ Sans\\ Condensed:style=bold font_size=28";
+		tag, "/h2" "- \n";
+		tag, "h2" "+ font=DejaVu\\ Sans\\ Condensed:style=bold font_size=25";
+		tag, "/h3" "- \n";
+	}
+}
+
+collections {
+    group {
+        name, "dict";
+        parts {
+            part {
+                name, "bg";
+                type, RECT;
+                description {
+                    state, "default" 0.0;
+                    color, 204 204 204 255;
+                }
+            }
+            part {
+                name, "text";
+                type, TEXTBLOCK;
+                multiline, 1;
+                description {
+                    state, "default" 0.0;
+                    color, 0 0 0 255;
+                    text {
+                        style, "textblock_style";
+                        max, 1 0;
+                        text, "";
+                    }
+                }
+            }
+        }
+    }
+}

@@ -12,4 +12,4 @@ PKG_CHECK_MODULES(LIBCHOICEBOX,[libchoicebox])
 PKG_CHECK_MODULES(LIBPICODICT,[libpicodict])
 PKG_CHECK_MODULES(LIBLOPS, [liblops])
 
-AC_OUTPUT(Makefile src/Makefile data/Makefile po/Makefile themes/Makefile help/Makefile)
+AC_OUTPUT(Makefile src/Makefile data/Makefile po/Makefile themes/Makefile themes/default/Makefile themes/azbooka/Makefile help/Makefile)
