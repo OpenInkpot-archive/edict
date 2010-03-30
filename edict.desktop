@@ -4,3 +4,4 @@ Name[ru]=Словарь
 Exec=edict_launcher
 Type=Application
 Categories=Applications
+Icon=edict
