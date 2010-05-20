@@ -86,7 +86,7 @@ load_dicts_from_dir(dict_t *dlist, const char *path)
 
         free(f);
 
-        pd_sort_mode sort = pd_validate(index_file, dict_file);
+        pd_sort_mode sort = pd_get_sort_mode(index_file, dict_file);
         if (sort >= 0) {
             dict_t *new = (dict_t *) calloc(sizeof(dict_t), 1);
             if (dlist)
