@@ -1,3 +1,9 @@
+edict (0.1.6) zelazny; urgency=low
+
+  * Adjustment to new ecore API
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sun, 04 Jul 2010 23:41:20 +0200
+
 edict (0.1.5) zelazny; urgency=low
 
   * Speedup loading dictionaries
