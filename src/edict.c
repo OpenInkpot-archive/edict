@@ -76,7 +76,7 @@ typedef struct {
     int size;
 } client_data_t;
 
-static int
+static Eina_Bool
 _client_add(void *param UNUSED, int ev_type UNUSED, void *ev)
 {
     Ecore_Con_Event_Client_Add *e = ev;
@@ -87,7 +87,7 @@ _client_add(void *param UNUSED, int ev_type UNUSED, void *ev)
     return 0;
 }
 
-static int
+static Eina_Bool
 _client_del(void *param, int ev_type UNUSED, void *ev)
 {
     info_t *info = (info_t *) param;
@@ -109,7 +109,7 @@ _client_del(void *param, int ev_type UNUSED, void *ev)
     return 0;
 }
 
-static int
+static Eina_Bool
 _client_data(void *param UNUSED, int ev_type UNUSED, void *ev)
 {
     Ecore_Con_Event_Client_Data *e = ev;
@@ -120,6 +120,7 @@ _client_data(void *param UNUSED, int ev_type UNUSED, void *ev)
     return 0;
 }
 
+/*
 static void
 show_help(Evas *evas)
 {
@@ -127,8 +128,9 @@ show_help(Evas *evas)
                   "edict", "index", gettext("Dictionary: Help"), NULL,
                   NULL);
 }
+*/
 
-void entry_handler(Evas_Object *entry,
+void entry_handler(Evas_Object *entry __attribute__((__unused__)),
         const char *text,
         void* param)
 {

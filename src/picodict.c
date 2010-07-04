@@ -184,6 +184,7 @@ string_append(str_t *s, const char *t, size_t len)
     }
 }
 
+#if 0
 static void
 string_destructor(str_t *s)
 {
@@ -195,6 +196,7 @@ string_destructor(str_t *s)
     s->slen = 0;
     s->rest = 0;
 }
+#endif
 
 void
 string_add_article(str_t *str, const char *ap, size_t alen)
