@@ -1,0 +1,32 @@
+# edict
+# This file is put in the public domain.
+# Alexander Kerner <lunohod@openinkpot.org>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: edict 0.1\n"
+"Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
+"POT-Creation-Date: 2010-03-09 18:50+0100\n"
+"PO-Revision-Date: 2010-04-03 10:12+0100\n"
+"Last-Translator: András Csehi <acsehi@gmail.com>\n"
+"Language-Team: Hungarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/edict.c:125
+msgid "Dictionary: Help"
+msgstr "Szótár: Segítség"
+
+#: src/edict.c:205
+msgid "Dictionary"
+msgstr "Szótár"
+
+#: src/edict.c:226
+msgid "No dictionaries found"
+msgstr "Nem találhatóak szótárak"
+
+#: src/picodict.c:39
+msgid "No results"
+msgstr "Nincs eredmény"
