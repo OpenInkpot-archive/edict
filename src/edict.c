@@ -57,6 +57,7 @@ typedef struct info_t {
     Evas_Object *textbox;
     keys_t *keys;
     dict_t *dlist;
+    char *last_search;
 } info_t;
 
 static void
@@ -138,6 +139,11 @@ void entry_handler(Evas_Object *entry,
     eoi_textbox_text_set(info->textbox, "");
     eoi_textbox_text_set(info->textbox, tr_str);
     free(tr_str);
+
+    if(info->last_search)
+        free(info->last_search);
+
+    info->last_search = strdup(text);
 }
 
 static void
@@ -157,7 +163,12 @@ key_handler(void *data, Evas *evas UNUSED, Evas_Object *obj UNUSED,
     if (!strcmp(action, "Search"))
         entry_new(evas, entry_handler, "entry",
             gettext("Search"), info);
-    if (!strcmp(action, "PageDown"))
+    else if (!strcmp(action, "SearchAgain")) {
+        Evas *o = entry_new(evas, entry_handler, "entry",
+            gettext("Search"), info);
+        if(info->last_search)
+            entry_text_set(o, info->last_search);
+    } if (!strcmp(action, "PageDown"))
         eoi_textbox_page_next(info->textbox);
     else if (!strcmp(action, "PageUp"))
         eoi_textbox_page_prev(info->textbox);
@@ -257,6 +268,8 @@ main(int argc, char *argv[])
     eoi_textbox_free(info->textbox);
     if (info->keys)
         keys_free(info->keys);
+    if (info->last_search)
+        free(info->last_search);
     close_dicts(info->dlist);
 
     ecore_con_server_del(serv);
