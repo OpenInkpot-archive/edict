@@ -2,7 +2,7 @@ Source: edict
 Section: gui
 Maintainer: Alexander Kerner <lunohod@openinkpot.org>
 XCS-Cross-Host-Build-Depends: debhelper (>> 2.0.0), autoconf, automake, libtool, pkg-config, libedje-bin, oi-help-compiler
-XCS-Cross-Build-Depends: libevas-dev, libecore-dev, libedje-dev, libkeys-dev, libeoi-dev (>= 0.3.1), libpicodict-dev (>= 0.1.4), liblops-dev
+XCS-Cross-Build-Depends: libevas-dev, libecore-dev, libedje-dev, libkeys-dev, libeoi-dev (>= 0.3.25), libpicodict-dev (>= 0.1.4), liblops-dev
 Priority: optional
 Standards-Version: 3.6.2
 
