@@ -1,3 +1,9 @@
+edict (0.1.8) zelazny; urgency=low
+
+  * Save search string comming from external application
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 10 Jul 2010 18:57:16 +0200
+
 edict (0.1.7) zelazny; urgency=low
 
   [ Tomasz Długosz ]
