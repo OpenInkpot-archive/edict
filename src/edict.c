@@ -97,6 +97,9 @@ _client_del(void *param, int ev_type UNUSED, void *ev)
     client_data_t *msg = ecore_con_client_data_get(e->client);
 
     char *str = strndup(msg->msg, msg->size);
+    if(info->last_search)
+        free(info->last_search);
+    info->last_search = strdup(str);
     char *tr_str = translate(info->dlist, str);
     eoi_textbox_text_set(info->textbox, "");
     eoi_textbox_text_set(info->textbox, tr_str);
