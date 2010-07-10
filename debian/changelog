@@ -1,3 +1,11 @@
+edict (0.1.6.bradbury.1) bradbury; urgency=low
+
+  * Build for bradbury
+  * Add ability to correct last entered text
+  * Save search string comming from external application
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 10 Jul 2010 22:42:23 +0200
+
 edict (0.1.5) zelazny; urgency=low
 
   * Speedup loading dictionaries
