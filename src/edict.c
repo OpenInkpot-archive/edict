@@ -51,6 +51,9 @@
 
 #define THEME_EDJ "edict"
 
+#define HELP_MSG gettext("<br>Press %s to enter search text.<br>Press %s to correct last entered text and search again.")
+char *help_msg = NULL;
+
 typedef struct info_t {
     Ecore_Evas *ee;
     Evas_Object *main_window;
@@ -102,7 +105,10 @@ _client_del(void *param, int ev_type UNUSED, void *ev)
     info->last_search = strdup(str);
     char *tr_str = translate(info->dlist, str);
     eoi_textbox_text_set(info->textbox, "");
-    eoi_textbox_text_set(info->textbox, tr_str);
+    if(tr_str && strlen(tr_str) > 0)
+        eoi_textbox_text_set(info->textbox, tr_str);
+    else
+        eoi_textbox_text_set(info->textbox, help_msg);
     free(tr_str);
     free(str);
     ecore_evas_show(info->ee);
@@ -134,6 +140,23 @@ show_help(Evas *evas)
 }
 */
 
+static void
+init_help_msg(info_t *info)
+{
+    if (!info->keys)
+        info->keys = keys_alloc("edict");
+
+    char *skey, *sakey;
+
+    Eina_List *l = keys_reverse_lookup(info->keys, "default", "Search");
+    skey = eina_list_data_get(eina_list_last(l));
+
+    l = keys_reverse_lookup(info->keys, "default", "SearchAgain");
+    sakey = eina_list_data_get(eina_list_last(l));
+
+    asprintf(&help_msg, HELP_MSG, keys_get_key_name(skey), keys_get_key_name(sakey));
+}
+
 void entry_handler(Evas_Object *entry __attribute__((__unused__)),
         const char *text,
         void* param)
@@ -142,7 +165,10 @@ void entry_handler(Evas_Object *entry __attribute__((__unused__)),
 
     char *tr_str = translate(info->dlist, text);
     eoi_textbox_text_set(info->textbox, "");
-    eoi_textbox_text_set(info->textbox, tr_str);
+    if(tr_str && strlen(tr_str) > 0)
+        eoi_textbox_text_set(info->textbox, tr_str);
+    else
+        eoi_textbox_text_set(info->textbox, help_msg);
     free(tr_str);
 
     if(info->last_search)
@@ -236,7 +262,6 @@ main(int argc, char *argv[])
     eoi_run_clock(info->main_window);
     eoi_run_battery(info->main_window);
 
-
     edje_object_part_text_set(info->main_window, "title",
                               gettext("Dictionary"));
     edje_object_part_text_set(info->main_window, "footer", "0/0");
@@ -257,16 +282,21 @@ main(int argc, char *argv[])
     evas_object_data_set(info->textbox, "myinfo", info);
     edje_object_part_swallow(info->main_window, "contents", info->textbox);
 
+    init_help_msg(info);
+
     info->dlist = load_dicts();
     if (!info->dlist)
         eoi_textbox_text_set(info->textbox,
                              gettext("No dictionaries found"));
     else if (argc > 1) {
         char *t = translate(info->dlist, argv[1]);
-        eoi_textbox_text_set(info->textbox, t);
+        if(t && strlen(t) > 0)
+            eoi_textbox_text_set(info->textbox, t);
+        else
+            eoi_textbox_text_set(info->textbox, help_msg);
         free(t);
     } else
-        eoi_textbox_text_set(info->textbox, "");
+        eoi_textbox_text_set(info->textbox, help_msg);
 
     ecore_main_loop_begin();
 
@@ -276,6 +306,9 @@ main(int argc, char *argv[])
     if (info->last_search)
         free(info->last_search);
     close_dicts(info->dlist);
+
+    if (help_msg)
+        free(help_msg);
 
     ecore_con_server_del(serv);
     ecore_con_shutdown();
