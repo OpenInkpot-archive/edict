@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edict 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2010-03-27 15:48+0100\n"
+"POT-Creation-Date: 2010-07-11 14:11+0200\n"
 "PO-Revision-Date: 2010-03-20 10:12+0100\n"
 "Last-Translator: Tomasz Długosz <tomek3d@gmail.com>\n"
 "Language-Team: Polish\n"
@@ -16,19 +16,26 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: src/edict.c:127
+#: src/edict.c:54
+#, c-format
+msgid ""
+"<br>Press %s to enter search text.<br>Press %s to correct last entered text "
+"and search again."
+msgstr ""
+
+#: src/edict.c:137
 msgid "Dictionary: Help"
 msgstr "Słownik: Pomoc"
 
-#: src/edict.c:159
+#: src/edict.c:194 src/edict.c:197
 msgid "Search"
 msgstr ""
 
-#: src/edict.c:225
+#: src/edict.c:264
 msgid "Dictionary"
 msgstr "Słownik"
 
-#: src/edict.c:247
+#: src/edict.c:288
 msgid "No dictionaries found"
 msgstr "Nie znaleziono słowników"
 
