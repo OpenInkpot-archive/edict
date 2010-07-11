@@ -1,3 +1,10 @@
+edict (0.1.9) zelazny; urgency=low
+
+  * Show help text instead of empty page
+  * Update .po files
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sun, 11 Jul 2010 14:09:55 +0200
+
 edict (0.1.8) zelazny; urgency=low
 
   * Save search string comming from external application
