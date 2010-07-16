@@ -1,3 +1,9 @@
+edict (0.1.6.bradbury.3) bradbury; urgency=low
+
+  * Update help text and its translations
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Fri, 16 Jul 2010 15:35:08 +0200
+
 edict (0.1.6.bradbury.2) bradbury; urgency=low
 
   * Show help text instead of empty page
