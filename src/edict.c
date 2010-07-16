@@ -51,7 +51,7 @@
 
 #define THEME_EDJ "edict"
 
-#define HELP_MSG gettext("<br>Press %s to enter search text.<br>Press %s to correct last entered text and search again.")
+#define HELP_MSG gettext("<br>Press %s to enter text for search.<br>Press %s to correct last entered text and search again.")
 char *help_msg = NULL;
 
 typedef struct info_t {

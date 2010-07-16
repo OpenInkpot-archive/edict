@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edict 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2010-07-11 13:42+0200\n"
+"POT-Creation-Date: 2010-07-16 15:19+0200\n"
 "PO-Revision-Date: 2010-04-03 10:12+0100\n"
 "Last-Translator: András Csehi <acsehi@gmail.com>\n"
 "Language-Team: Hungarian\n"
@@ -18,19 +18,19 @@ msgstr ""
 #: src/edict.c:54
 #, c-format
 msgid ""
-"<br>Press %s to enter search text.<br>Press %s to correct last entered text "
-"and search again."
+"<br>Press %s to enter text for search.<br>Press %s to correct last entered "
+"text and search again."
 msgstr ""
 
-#: src/edict.c:199 src/edict.c:202
+#: src/edict.c:196 src/edict.c:199
 msgid "Search"
 msgstr ""
 
-#: src/edict.c:269
+#: src/edict.c:266
 msgid "Dictionary"
 msgstr "Szótár"
 
-#: src/edict.c:293
+#: src/edict.c:290
 msgid "No dictionaries found"
 msgstr "Nem találhatóak szótárak"
 
