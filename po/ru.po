@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edict 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2010-07-11 14:11+0200\n"
+"POT-Creation-Date: 2010-07-16 15:19+0200\n"
 "PO-Revision-Date: Sat, 27 Mar 2010 15:49:18 +0100\n"
 "Last-Translator: Alexander Kerner <lunohod@openinkpot.org>\n"
 "Language-Team: Russian\n"
@@ -17,29 +17,29 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: src/edict.c:54
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"<br>Press %s to enter search text.<br>Press %s to correct last entered text "
-"and search again."
-msgstr "<br>Нажмите %s для ввода текста для поиска.<br>Нажмите %s для корректировки последнего"
-" введённого текста и повторного поиска."
+"<br>Press %s to enter text for search.<br>Press %s to correct last entered "
+"text and search again."
+msgstr ""
+"<br>Нажмите %s, чтобы ввести текст для поиска.<br>Нажмите %s для корректировки "
+"последнего введённого текста и повторного поиска."
 
-#: src/edict.c:137
-msgid "Dictionary: Help"
-msgstr "Словарь: Справка"
-
-#: src/edict.c:194 src/edict.c:197
+#: src/edict.c:196 src/edict.c:199
 msgid "Search"
 msgstr "Поиск"
 
-#: src/edict.c:264
+#: src/edict.c:266
 msgid "Dictionary"
 msgstr "Словарь"
 
-#: src/edict.c:288
+#: src/edict.c:290
 msgid "No dictionaries found"
-msgstr "Слово не найдено"
+msgstr "Словари не найдены"
 
 #: src/picodict.c:39
 msgid "No results"
 msgstr "Нет результатов"
+
+#~ msgid "Dictionary: Help"
+#~ msgstr "Словарь: Справка"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edict 0.1\n"
 "Report-Msgid-Bugs-To: lunohod@openinkpot.org\n"
-"POT-Creation-Date: 2010-07-11 14:11+0200\n"
+"POT-Creation-Date: 2010-07-16 15:19+0200\n"
 "PO-Revision-Date: 2010-03-20 10:12+0100\n"
 "Last-Translator: Tomasz Długosz <tomek3d@gmail.com>\n"
 "Language-Team: Polish\n"
@@ -19,26 +19,25 @@ msgstr ""
 #: src/edict.c:54
 #, c-format
 msgid ""
-"<br>Press %s to enter search text.<br>Press %s to correct last entered text "
-"and search again."
+"<br>Press %s to enter text for search.<br>Press %s to correct last entered "
+"text and search again."
 msgstr ""
 
-#: src/edict.c:137
-msgid "Dictionary: Help"
-msgstr "Słownik: Pomoc"
-
-#: src/edict.c:194 src/edict.c:197
+#: src/edict.c:196 src/edict.c:199
 msgid "Search"
-msgstr ""
+msgstr "Szukaj"
 
-#: src/edict.c:264
+#: src/edict.c:266
 msgid "Dictionary"
 msgstr "Słownik"
 
-#: src/edict.c:288
+#: src/edict.c:290
 msgid "No dictionaries found"
 msgstr "Nie znaleziono słowników"
 
 #: src/picodict.c:39
 msgid "No results"
 msgstr "Brak wyniku"
+
+#~ msgid "Dictionary: Help"
+#~ msgstr "Słownik: Pomoc"
