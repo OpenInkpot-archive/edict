@@ -17,7 +17,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: src/edict.c:54
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "<br>Press %s to enter text for search.<br>Press %s to correct last entered "
 "text and search again."
