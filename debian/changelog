@@ -1,3 +1,9 @@
+edict (0.1.6.bradbury.4) bradbury; urgency=low
+
+  * Update translations
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Mon, 26 Jul 2010 11:36:20 +0200
+
 edict (0.1.6.bradbury.3) bradbury; urgency=low
 
   * Update help text and its translations
