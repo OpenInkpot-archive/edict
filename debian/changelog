@@ -1,3 +1,9 @@
+edict (0.1.11) zelazny; urgency=low
+
+  * Fix translations
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Mon, 26 Jul 2010 11:27:17 +0200
+
 edict (0.1.10) zelazny; urgency=low
 
   * Update translations
