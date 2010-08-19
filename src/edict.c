@@ -246,7 +246,7 @@ main(int argc, char *argv[])
 
     ecore_x_io_error_handler_set(exit_all, NULL);
 
-    info->ee = ecore_evas_software_x11_new(0, 0, 0, 0, 600, 800);
+    info->ee = ecore_evas_software_x11_8_new(0, 0, 0, 0, 600, 800);
     ecore_evas_borderless_set(info->ee, 0);
     ecore_evas_shaped_set(info->ee, 0);
     ecore_evas_title_set(info->ee, "edict");
