@@ -1,3 +1,13 @@
+edict (0.1.12) zelazny; urgency=low
+
+  [ Tomasz Długosz ]
+  * l10n: Updates to Polish (pl) translation
+
+  [ Alexander Kerner ]
+  * Use 8bpp engine
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Thu, 19 Aug 2010 09:43:49 +0200
+
 edict (0.1.11) zelazny; urgency=low
 
   * Fix translations
