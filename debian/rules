@@ -31,7 +31,7 @@ install: build
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 
 	mkdir -p $(CURDIR)/debian/edict-settings-n516/etc/keys
-	install -m 0644 $(CURDIR)/data/edict.n516.ini $(CURDIR)/debian/edict-settings-prs505/etc/keys/edict.ini
+	install -m 0644 $(CURDIR)/data/edict.n516.ini $(CURDIR)/debian/edict-settings-n516/etc/keys/edict.ini
 
 	mkdir -p $(CURDIR)/debian/edict-settings-prs505/etc/keys
 	install -m 0644 $(CURDIR)/data/edict.prs505.ini $(CURDIR)/debian/edict-settings-prs505/etc/keys/edict.ini
