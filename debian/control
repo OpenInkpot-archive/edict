@@ -23,6 +23,14 @@ Description: Dictionary for e-Ink devices -- debugging symbols
  .
  This package contains debugging symbols.
 
+Package: edict-settings-prs505
+Architecture: all
+Description: Dictionary for e-Ink devices -- PRS505 keymapping
+ edict is a dictionary designed to be usable on devices with limited abount of
+ keys and slow screen refresh.
+ .
+ This package contains keymapping configuration file for Sony PRS505.
+
 Package: edict-settings-n516
 Architecture: all
 Description: Dictionary for e-Ink devices -- N516 keymapping
