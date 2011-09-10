@@ -1,3 +1,9 @@
+edict (0.1.13) zelazny; urgency=low
+
+  * Add settings for PRS505
+
+ -- Alexander Kerner <lunohod@openinkpot.org>  Sat, 10 Sep 2011 23:03:27 +0200
+
 edict (0.1.12) zelazny; urgency=low
 
   [ Tomasz Długosz ]
